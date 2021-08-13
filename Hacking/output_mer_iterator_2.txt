@@ -1,0 +1,37 @@
+kushagra@kushagra:~/Documents/IISc_Internship/Jellyfish/Code/Jellyfish-master$ jellyfish count -m 6 -s 1M -t 10 -C ../test_seq.fasta
+ATGCCA     final m_ being returned on line 95 in mer_iterator.hpp
+TGGCAT     final rcm_ being returned on line 96 in mer_iterator.hpp
+I'm inside alter_it
+AATGCC     final m_ being returned on line 98 in mer_iterator.hpp
+
+ATGCCT     final m_ being returned on line 95 in mer_iterator.hpp
+ATGGCA     final rcm_ being returned on line 96 in mer_iterator.hpp
+I'm inside alter_it
+AATGCC     final m_ being returned on line 98 in mer_iterator.hpp
+
+GTCTCA     final m_ being returned on line 95 in mer_iterator.hpp
+TGAGAC     final rcm_ being returned on line 96 in mer_iterator.hpp
+I'm inside alter_it
+AGTCTC     final m_ being returned on line 98 in mer_iterator.hpp
+
+GTCTCT     final m_ being returned on line 95 in mer_iterator.hpp
+ATGAGA     final rcm_ being returned on line 96 in mer_iterator.hpp
+I'm inside alter_it
+AGTCTC     final m_ being returned on line 98 in mer_iterator.hpp
+
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>> mer_counts_dumps.fa file >>>>>>>
+>2
+AATGCC
+>2
+AGTCTC
+
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Problems:
+1) If I modify the kmer using alter_it(), the next kmer formed starts from the modified version. Find a way to store the current and reload.
+2) Need to modify _data to change the kmer, understand more about it.
