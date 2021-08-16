@@ -1,8 +1,8 @@
 from Bio import SeqIO
 
-fasta_sequences1 = SeqIO.parse(open("single_dumps.fa"),'fasta')
-fasta_sequences2 = SeqIO.parse(open("four_dumps.fa"),'fasta')
-write_file = open("differences_threaded.txt","w+")
+fasta_sequences1 = SeqIO.parse(open("input/single_dumps.fa"),'fasta')
+fasta_sequences2 = SeqIO.parse(open("input/single_modified_dumps.fa"),'fasta')
+write_file = open("results/1vs1_modified.txt","w+")
 
 total1 = 0
 total2 = 0
