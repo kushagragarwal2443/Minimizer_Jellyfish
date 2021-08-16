@@ -1,0 +1,128 @@
+kushagra@kushagra:~/Documents/IISc_Internship/Jellyfish/Code/Jellyfish-master$ jellyfish count -m 6 -s 1M -t 10 -C ../test_seq.fasta
+
+
+0   code on line 70 in mer_iterator.hpp
+I'm inside the do loop on line 71 in mer_iterator.hpp
+AAAAAA   m_ before shift left on line 74 in mer_iterator.hpp
+AAAAAA   m_ after shift left on line 76 in mer_iterator.hpp
+AAAAAA   rcm_ before shift right on line 78 in mer_iterator.hpp
+TAAAAA   rcm_ after shift right on line 80 in mer_iterator.hpp
+1     filled_ on line 82 in mer_iterator.hpp
+3   code on line 70 in mer_iterator.hpp
+I'm inside the do loop on line 71 in mer_iterator.hpp
+AAAAAA   m_ before shift left on line 74 in mer_iterator.hpp
+AAAAAT   m_ after shift left on line 76 in mer_iterator.hpp
+TAAAAA   rcm_ before shift right on line 78 in mer_iterator.hpp
+ATAAAA   rcm_ after shift right on line 80 in mer_iterator.hpp
+2     filled_ on line 82 in mer_iterator.hpp
+2   code on line 70 in mer_iterator.hpp
+I'm inside the do loop on line 71 in mer_iterator.hpp
+AAAAAT   m_ before shift left on line 74 in mer_iterator.hpp
+AAAATG   m_ after shift left on line 76 in mer_iterator.hpp
+ATAAAA   rcm_ before shift right on line 78 in mer_iterator.hpp
+CATAAA   rcm_ after shift right on line 80 in mer_iterator.hpp
+3     filled_ on line 82 in mer_iterator.hpp
+1   code on line 70 in mer_iterator.hpp
+I'm inside the do loop on line 71 in mer_iterator.hpp
+AAAATG   m_ before shift left on line 74 in mer_iterator.hpp
+AAATGC   m_ after shift left on line 76 in mer_iterator.hpp
+CATAAA   rcm_ before shift right on line 78 in mer_iterator.hpp
+GCATAA   rcm_ after shift right on line 80 in mer_iterator.hpp
+4     filled_ on line 82 in mer_iterator.hpp
+1   code on line 70 in mer_iterator.hpp
+I'm inside the do loop on line 71 in mer_iterator.hpp
+AAATGC   m_ before shift left on line 74 in mer_iterator.hpp
+AATGCC   m_ after shift left on line 76 in mer_iterator.hpp
+GCATAA   rcm_ before shift right on line 78 in mer_iterator.hpp
+GGCATA   rcm_ after shift right on line 80 in mer_iterator.hpp
+5     filled_ on line 82 in mer_iterator.hpp
+0   code on line 70 in mer_iterator.hpp
+I'm inside the do loop on line 71 in mer_iterator.hpp
+AATGCC   m_ before shift left on line 74 in mer_iterator.hpp
+ATGCCA   m_ after shift left on line 76 in mer_iterator.hpp
+GGCATA   rcm_ before shift right on line 78 in mer_iterator.hpp
+TGGCAT   rcm_ after shift right on line 80 in mer_iterator.hpp
+6     filled_ on line 82 in mer_iterator.hpp
+6     filled_ after exiting the loop line 87 in mer_iterator.hpp
+6     filled_ in the if condition on line 90 in mer_iterator.hpp
+6     m_.k() in the if condition on line 91 in mer_iterator.hpp
+0x7fc4097ecd70     this being returned on line 95 in mer_iterator.hpp
+0x7fc3fc000b60     *this being returned on line 95 in mer_iterator.hpp
+3   code on line 70 in mer_iterator.hpp
+I'm inside the do loop on line 71 in mer_iterator.hpp
+ATGCCA   m_ before shift left on line 74 in mer_iterator.hpp
+TGCCAT   m_ after shift left on line 76 in mer_iterator.hpp
+TGGCAT   rcm_ before shift right on line 78 in mer_iterator.hpp
+ATGGCA   rcm_ after shift right on line 80 in mer_iterator.hpp
+6     filled_ on line 82 in mer_iterator.hpp
+6     filled_ after exiting the loop line 87 in mer_iterator.hpp
+6     filled_ in the if condition on line 90 in mer_iterator.hpp
+6     m_.k() in the if condition on line 91 in mer_iterator.hpp
+0x7fc4097ecd70     this being returned on line 95 in mer_iterator.hpp
+0x7fc3fc000b60     *this being returned on line 95 in mer_iterator.hpp
+
+
+-1   code on line 70 in mer_iterator.hpp
+
+
+I'm inside the do loop on line 71 in mer_iterator.hpp
+2   code on line 70 in mer_iterator.hpp
+I'm inside the do loop on line 71 in mer_iterator.hpp
+TGCCAT   m_ before shift left on line 74 in mer_iterator.hpp
+GCCATG   m_ after shift left on line 76 in mer_iterator.hpp
+ATGGCA   rcm_ before shift right on line 78 in mer_iterator.hpp
+CATGGC   rcm_ after shift right on line 80 in mer_iterator.hpp
+1     filled_ on line 82 in mer_iterator.hpp
+3   code on line 70 in mer_iterator.hpp
+I'm inside the do loop on line 71 in mer_iterator.hpp
+GCCATG   m_ before shift left on line 74 in mer_iterator.hpp
+CCATGT   m_ after shift left on line 76 in mer_iterator.hpp
+CATGGC   rcm_ before shift right on line 78 in mer_iterator.hpp
+ACATGG   rcm_ after shift right on line 80 in mer_iterator.hpp
+2     filled_ on line 82 in mer_iterator.hpp
+1   code on line 70 in mer_iterator.hpp
+I'm inside the do loop on line 71 in mer_iterator.hpp
+CCATGT   m_ before shift left on line 74 in mer_iterator.hpp
+CATGTC   m_ after shift left on line 76 in mer_iterator.hpp
+ACATGG   rcm_ before shift right on line 78 in mer_iterator.hpp
+GACATG   rcm_ after shift right on line 80 in mer_iterator.hpp
+3     filled_ on line 82 in mer_iterator.hpp
+3   code on line 70 in mer_iterator.hpp
+I'm inside the do loop on line 71 in mer_iterator.hpp
+CATGTC   m_ before shift left on line 74 in mer_iterator.hpp
+ATGTCT   m_ after shift left on line 76 in mer_iterator.hpp
+GACATG   rcm_ before shift right on line 78 in mer_iterator.hpp
+AGACAT   rcm_ after shift right on line 80 in mer_iterator.hpp
+4     filled_ on line 82 in mer_iterator.hpp
+1   code on line 70 in mer_iterator.hpp
+I'm inside the do loop on line 71 in mer_iterator.hpp
+ATGTCT   m_ before shift left on line 74 in mer_iterator.hpp
+TGTCTC   m_ after shift left on line 76 in mer_iterator.hpp
+AGACAT   rcm_ before shift right on line 78 in mer_iterator.hpp
+GAGACA   rcm_ after shift right on line 80 in mer_iterator.hpp
+5     filled_ on line 82 in mer_iterator.hpp
+0   code on line 70 in mer_iterator.hpp
+I'm inside the do loop on line 71 in mer_iterator.hpp
+TGTCTC   m_ before shift left on line 74 in mer_iterator.hpp
+GTCTCA   m_ after shift left on line 76 in mer_iterator.hpp
+GAGACA   rcm_ before shift right on line 78 in mer_iterator.hpp
+TGAGAC   rcm_ after shift right on line 80 in mer_iterator.hpp
+6     filled_ on line 82 in mer_iterator.hpp
+6     filled_ after exiting the loop line 87 in mer_iterator.hpp
+6     filled_ in the if condition on line 90 in mer_iterator.hpp
+6     m_.k() in the if condition on line 91 in mer_iterator.hpp
+0x7fc4097ecd70     this being returned on line 95 in mer_iterator.hpp
+0x7fc3fc000b60     *this being returned on line 95 in mer_iterator.hpp
+3   code on line 70 in mer_iterator.hpp
+I'm inside the do loop on line 71 in mer_iterator.hpp
+GTCTCA   m_ before shift left on line 74 in mer_iterator.hpp
+TCTCAT   m_ after shift left on line 76 in mer_iterator.hpp
+TGAGAC   rcm_ before shift right on line 78 in mer_iterator.hpp
+ATGAGA   rcm_ after shift right on line 80 in mer_iterator.hpp
+6     filled_ on line 82 in mer_iterator.hpp
+6     filled_ after exiting the loop line 87 in mer_iterator.hpp
+6     filled_ in the if condition on line 90 in mer_iterator.hpp
+6     m_.k() in the if condition on line 91 in mer_iterator.hpp
+0x7fc4097ecd70     this being returned on line 95 in mer_iterator.hpp
+0x7fc3fc000b60     *this being returned on line 95 in mer_iterator.hpp
+

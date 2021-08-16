@@ -1,8 +1,8 @@
 from Bio import SeqIO
 
-fasta_sequences1 = SeqIO.parse(open("input/single_norev_dumps.fa"),'fasta')
-fasta_sequences2 = SeqIO.parse(open("input/four_norev_dumps.fa"),'fasta')
-write_file = open("results/1_norev_vs_4_norev.txt","w+")
+fasta_sequences1 = SeqIO.parse(open("input/check/check_single_norev_dumps.fa"),'fasta')
+fasta_sequences2 = SeqIO.parse(open("input/check/check_four_norev_dumps.fa"),'fasta')
+write_file = open("results/check/1_norev_vs_4_norev.txt","w+")
 
 total1 = 0
 total2 = 0

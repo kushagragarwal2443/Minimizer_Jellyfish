@@ -1,0 +1,5 @@
+So ran the Original jellyfish and our brute force Minimizer version on the sequences.fasta file.
+
+Original jellyfish took 7-8 seconds compared to 22-25 seconds by our Minimizer approach. Space taken also increased in the Minimizer version.
+
+The next step is to now compare the times between these 2 on a larger dataset and hope for some better performance under the assumption that our method has a large initial overhead and can scale better.

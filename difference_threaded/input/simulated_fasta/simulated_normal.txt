@@ -1,0 +1,2 @@
+Deleted 3 files simulated_single_dumps.fa, simulated_two_dumps.fa, simulated_four_dumps.fa as all of them were 100 MBs each.
+The results for the same are still present in the results folder
