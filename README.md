@@ -15,3 +15,9 @@ ii) Jellyfish_modulo_random: No functional changes in any other file except for 
 Added a folder differences_threaded with a python script to find out differences between the results for 2 different runs on the sequences.fasta file using different number of threads from the input folder. 2 test sequences were also used to verify the correctness of the code. All the differences (Mismatch in count, Not present in File1, Not present in File2) as well as Correct matches are written to the results folder.
 
 Observations: There is a huge disparity between the results for single-threaded vs multi-threaded code. Disparity exists between two_threaded vs 4_threaded runs as well. Multiple runs of the multi-threaded code do not give the same results. Multiple runs of the single threaded code give the same results.
+
+##### After running some more tests....
+
+Turns out the problem wasnt the multithreaded functionality but rather the *canonical* flag *-C*. As soon as we remove this flag, both single and multithreaded runs give the exact same results.
+
+I also tested with simulated fasta files generated using the **fasta simulator**, which creates pure fasta files (with no ambiguous bases *N*). On running multithreaded runs on this fasta file, the mismatch count always came out to be 0, even though Not present in File x wasn't 0.

@@ -647,7 +647,7 @@ configure:12860: gcc -o conftest -g -O2   conftest.c  >&5
 configure:12860: $? = 0
 configure:12860: ./conftest
 configure:12860: $? = 0
-configure:12870: result: 906ea:a100800:7ffafbbf:bfebfbff
+configure:12870: result: 906ea:9100800:7ffafbbf:bfebfbff
 configure:12897: checking for x86 cpuid 0x00000007 output
 configure:12929: gcc -o conftest -g -O2   conftest.c  >&5
 configure:12929: $? = 0
@@ -1263,7 +1263,7 @@ ax_cv_check_cxxflags___mssse3=yes
 ax_cv_gcc_x86_avx_xgetbv_0x00000000=1f:0
 ax_cv_gcc_x86_avx_xgetbv_=unknown
 ax_cv_gcc_x86_cpuid_0x00000000=16:756e6547:6c65746e:49656e69
-ax_cv_gcc_x86_cpuid_0x00000001=906ea:a100800:7ffafbbf:bfebfbff
+ax_cv_gcc_x86_cpuid_0x00000001=906ea:9100800:7ffafbbf:bfebfbff
 ax_cv_gcc_x86_cpuid_0x00000007=0:29c67af:40000000:9c002e00
 ax_cv_gcc_x86_cpuid_0x80000000=80000008:0:0:0
 ax_cv_gcc_x86_cpuid_0x80000001=0:0:121:2c100800
@@ -1405,7 +1405,7 @@ lt_cv_truncate_bin='/usr/bin/dd bs=4096 count=1'
 ## Output variables. ##
 ## ----------------- ##
 
-ACLOCAL='${SHELL} /home/kushagra/Documents/IISc_Internship/Jellyfish/Code/Jellyfish_hacking/missing aclocal-1.16'
+ACLOCAL='${SHELL} /home/kushagra/Documents/IISc_Internship/Jellyfish/Code/Jellyfish_hacking_Aug13/missing aclocal-1.16'
 AMDEPBACKSLASH='\'
 AMDEP_FALSE='#'
 AMDEP_TRUE=''
@@ -1415,9 +1415,9 @@ AM_DEFAULT_V='$(AM_DEFAULT_VERBOSITY)'
 AM_DEFAULT_VERBOSITY='0'
 AM_V='$(V)'
 AR='ar'
-AUTOCONF='${SHELL} /home/kushagra/Documents/IISc_Internship/Jellyfish/Code/Jellyfish_hacking/missing autoconf'
-AUTOHEADER='${SHELL} /home/kushagra/Documents/IISc_Internship/Jellyfish/Code/Jellyfish_hacking/missing autoheader'
-AUTOMAKE='${SHELL} /home/kushagra/Documents/IISc_Internship/Jellyfish/Code/Jellyfish_hacking/missing automake-1.16'
+AUTOCONF='${SHELL} /home/kushagra/Documents/IISc_Internship/Jellyfish/Code/Jellyfish_hacking_Aug13/missing autoconf'
+AUTOHEADER='${SHELL} /home/kushagra/Documents/IISc_Internship/Jellyfish/Code/Jellyfish_hacking_Aug13/missing autoheader'
+AUTOMAKE='${SHELL} /home/kushagra/Documents/IISc_Internship/Jellyfish/Code/Jellyfish_hacking_Aug13/missing automake-1.16'
 AWK='gawk'
 CC='gcc'
 CCDEPMODE='depmode=gcc3'
@@ -1460,7 +1460,7 @@ LIPO=''
 LN_S='ln -s'
 LTLIBOBJS=''
 LT_SYS_LIBRARY_PATH=''
-MAKEINFO='${SHELL} /home/kushagra/Documents/IISc_Internship/Jellyfish/Code/Jellyfish_hacking/missing makeinfo'
+MAKEINFO='${SHELL} /home/kushagra/Documents/IISc_Internship/Jellyfish/Code/Jellyfish_hacking_Aug13/missing makeinfo'
 MANIFEST_TOOL=':'
 MD5='md5sum'
 MKDIR_P='/usr/bin/mkdir -p'
@@ -1560,7 +1560,7 @@ host_vendor='pc'
 htmldir='${docdir}'
 includedir='${prefix}/include'
 infodir='${datarootdir}/info'
-install_sh='${SHELL} /home/kushagra/Documents/IISc_Internship/Jellyfish/Code/Jellyfish_hacking/install-sh'
+install_sh='${SHELL} /home/kushagra/Documents/IISc_Internship/Jellyfish/Code/Jellyfish_hacking_Aug13/install-sh'
 libdir='${exec_prefix}/lib'
 libexecdir='${exec_prefix}/libexec'
 localedir='${datarootdir}/locale'

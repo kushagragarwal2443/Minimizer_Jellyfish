@@ -5,8 +5,8 @@ pref=$(basename $0 .sh)
 DIR=../bin
 JF="$DIR/jellyfish"
 [ -n "$VALGRIND" ] && JF="valgrind $JF"
-SRCDIR=/home/kushagra/Documents/IISc_Internship/Jellyfish/Code/Jellyfish_hacking
-BUILDDIR=/home/kushagra/Documents/IISc_Internship/Jellyfish/Code/Jellyfish_hacking
+SRCDIR=/home/kushagra/Documents/IISc_Internship/Jellyfish/Code/Jellyfish_hacking_Aug13
+BUILDDIR=/home/kushagra/Documents/IISc_Internship/Jellyfish/Code/Jellyfish_hacking_Aug13
 
 check () {
     cut -d\  -f 2 $1 | xargs md5sum | sed 's/ \*/ /' | sort -k2,2 | diff -w $DIFFFLAGS $1 -
