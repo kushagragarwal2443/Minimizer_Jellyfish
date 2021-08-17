@@ -1,8 +1,8 @@
 from Bio import SeqIO
 
-fasta_sequences1 = SeqIO.parse(open("input/MT_human/MT_two_dumps.fa"),'fasta')
-fasta_sequences2 = SeqIO.parse(open("input/MT_human/MT_four_dumps.fa"),'fasta')
-write_file = open("results/MT_human/MT_2vs4.txt","w+")
+fasta_sequences1 = SeqIO.parse(open("input/sequences_fasta/four_dumps.fa"),'fasta')
+fasta_sequences2 = SeqIO.parse(open("input/sequences_fasta/modified/four_modified_run2_dumps.fa"),'fasta')
+write_file = open("results/sequences_fasta/modified/4vs_4_modified_run2.txt","w+")
 
 total1 = 0
 total2 = 0

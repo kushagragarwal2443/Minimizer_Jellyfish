@@ -10,7 +10,7 @@ Hello this is my local copy of the work done to modify Jellyfish code
 i) Jellyfish_hacking_Aug13: Was built by integrating sketch.c in the count_main.cc file. Also added a bit of code in mer_dna and mer_iterator to allow *rid* to work well allowing correct reading of multiline fastas.
 ii) Jellyfish_modulo_random: No functional changes in any other file except for count_main.cc. There are 3 if/endif blocks in the code. One for modulo, one for random_number_generator and the third for the actual original Jellyfish implementation. Make sure to make the other 2 blocks as 0 and the required one as 1 before compiling.
 
-### Update 1: 16th August
+### Update 1: 16th and 17th August
 ---
 
 Added a folder differences_threaded with a python script to find out differences between the results for 2 different runs on the sequences.fasta file using different number of threads from the input folder. 2 test sequences were also used to verify the correctness of the code. All the differences (Mismatch in count, Not present in File1, Not present in File2) as well as Correct matches are written to the results folder.
@@ -25,6 +25,15 @@ I also tested with simulated fasta files generated using the **fasta simulator**
 
 Final set of tests were done using the minimap2 test set MT_human.fa (results present in the difference_threaded folder). Even there, all pairwise comparisons for -C flag enabled runs resulted in discrepancies, whereas all the runs with -C flag excluded gave the same results.
 
-As of now, my hypothesis is that the discrepancy is because of different hash functions used by Minimap2 and Jellyfish to decide which of the two canonical kmers is smaller, but if only this is the problem, then why do multiple runs of the same sequence with the same number of non-singular threads result in different dump files? Need to know more about this.....
+##### MY CURRENT KNOWLEDGE! 
+
+As of now, my hypothesis is that the discrepancy is because of different hash functions used by Minimap2 and Jellyfish to decide which of the two canonical kmers is smaller, but if only this was the problem, then why do multiple runs of the same sequence with the same number of non-singular threads result in different dump files? Need to know more about this.
+
+I ran some more tests (see the sequences_fasta in difference_threaded) in the modified and modified_norev folders to check how the -C flag and multithreaded change dumps for the same file with the same number of threads in multiple runs. So, on removing the -C flag (modified_norev), the results of multiple runs are the same, irrespective of the number of threads (1 or 4). But on keeping the -C flag (modified), the results of multiple runs of single threads remains the same, but not so for multiple_threads.
+
+#### PICTORIAL REPRESENTATION OF MY UNDERSTANDING...
+---
+
+![-C and multithreaded understanding](difference_threaded/pic.jpeg?raw=true "-C and multithreaded understanding")
 
 ---
