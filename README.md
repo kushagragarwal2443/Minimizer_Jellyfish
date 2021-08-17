@@ -23,4 +23,8 @@ Turns out the problem wasnt the multithreaded functionality but rather the *cano
 
 I also tested with simulated fasta files generated using the **fasta simulator**, which creates pure fasta files (with no ambiguous bases *N*). On running multithreaded runs on this fasta file with the Canonical flag, the mismatch count always came out to be 0, even though Not present in File x wasn't 0. On removing the Canonical flag, all the matches were correct.
 
+Final set of tests were done using the minimap2 test set MT_human.fa (results present in the difference_threaded folder). Even there, all pairwise comparisons for -C flag enabled runs resulted in discrepancies, whereas all the runs with -C flag excluded gave the same results.
+
+As of now, my hypothesis is that the discrepancy is because of different hash functions used by Minimap2 and Jellyfish to decide which of the two canonical kmers is smaller, but if only this is the problem, then why do multiple runs of the same sequence with the same number of non-singular threads result in different dump files? Need to know more about this.....
+
 ---
