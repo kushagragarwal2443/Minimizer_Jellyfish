@@ -36,4 +36,20 @@ I ran some more tests (see the sequences_fasta in difference_threaded) in the mo
 
 ![-C and multithreaded understanding](difference_threaded/pic.jpeg?raw=true "-C and multithreaded understanding")
 
+We should compare our code without the -C flag and the original Jellyfish code with the -C flag for correct comparison basically.
+
+---
+
+### Update 2: August 18th
+
+Aug17_updated was added in Code which runs significantly faster than the other 2 versions.
+
+Added more comparisons for difference_threaded.
+
+Also added **distribution_plotter** to compare the plots for the kmer distributions as returned by the original jellyfish code and our Aug17_updated version. The plot shows that along the x-axis the distribution remains similar just the y-axis values get scaled (by a factor of 11 (or simply w+1/2)).
+
+The plot for 50x genome for SARS-CoV-2 is shown below:
+
+![50seq plots](distribution_plotter/50seq_plots.png?raw=true "50seq plots")
+
 ---
