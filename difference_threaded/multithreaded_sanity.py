@@ -1,8 +1,8 @@
 from Bio import SeqIO
 
-fasta_sequences1 = SeqIO.parse(open("input/sequences_fasta/four_dumps.fa"),'fasta')
-fasta_sequences2 = SeqIO.parse(open("input/sequences_fasta/modified/four_modified_run2_dumps.fa"),'fasta')
-write_file = open("results/sequences_fasta/modified/4vs_4_modified_run2.txt","w+")
+fasta_sequences1 = SeqIO.parse(open("../sanity_checker/jelly.fa"),'fasta')
+fasta_sequences2 = SeqIO.parse(open("../sanity_checker/expected.fasta"),'fasta')
+write_file = open("../sanity_checker/comparison.txt","w+")
 
 total1 = 0
 total2 = 0
@@ -25,9 +25,9 @@ for fasta2 in fasta_sequences2:
 
 for key1 in dict1:
 
-    if(finished % 100 == 0):
-        print("FINISHED WITH: ", finished)
-    finished+=1
+    # if(finished % 100 == 0):
+    #     print("FINISHED WITH: ", finished)
+    # finished+=1
 
     if(key1 not in dict2):
         not_present_file2 +=1
@@ -45,7 +45,6 @@ for key2 in dict2:
         not_present_file1 +=1
         write_file.write("Not present in File1: " + str(key2) + " " + str(dict2[key2]) + "\n")
 
-print("\nDONE\n")
 print("Total sequences:", total1, total2)
 print("Correct for both:", correct)
 print("Mismatch in count:", mismatch)

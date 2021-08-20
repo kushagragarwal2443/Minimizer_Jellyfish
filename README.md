@@ -31,10 +31,9 @@ As of now, my hypothesis is that the discrepancy is because of different hash fu
 
 I ran some more tests (see the sequences_fasta in difference_threaded) in the modified and modified_norev folders to check how the -C flag and multithreaded change dumps for the same file with the same number of threads in multiple runs. So, on removing the -C flag (modified_norev), the results of multiple runs are the same, irrespective of the number of threads (1 or 4). But on keeping the -C flag (modified), the results of multiple runs of single threads remains the same, but not so for multiple_threads.
 
-#### PICTORIAL REPRESENTATION OF MY UNDERSTANDING...
----
+<!-- #### PICTORIAL REPRESENTATION OF MY UNDERSTANDING...
 
-![-C and multithreaded understanding](difference_threaded/pic.jpeg?raw=true "-C and multithreaded understanding")
+![-C and multithreaded understanding](difference_threaded/pic.jpeg?raw=true "-C and multithreaded understanding") -->
 
 We should compare our code without the -C flag and the original Jellyfish code with the -C flag for correct comparison basically.
 
@@ -48,8 +47,14 @@ Added more comparisons for difference_threaded.
 
 Also added **distribution_plotter** to compare the plots for the kmer distributions as returned by the original jellyfish code and our Aug17_updated version. The plot shows that along the x-axis the distribution remains similar just the y-axis values get scaled (by a factor of 11 (or simply w+1/2)).
 
-The plot for 50x genome for SARS-CoV-2 is shown below:
+<!-- The plot for 50x genome for SARS-CoV-2 is shown below:
 
-![50seq plots](distribution_plotter/50seq_plots.png?raw=true "50seq plots")
+![50seq plots](distribution_plotter/50seq_plots.png?raw=true "50seq plots") -->
+
+---
+
+### Update 3: August 20th
+
+Incomplete push. The sanity checker was implemented, which runs properly for nearly all cases. There is some minor difference though. Hoping to resolve it soon....
 
 ---
