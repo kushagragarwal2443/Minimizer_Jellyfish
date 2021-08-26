@@ -17,4 +17,4 @@ with open(file_name) as file:
 			break		
 
 plt.plot(x_list,y_list)
-plt.savefig('e_coli_hist.jpg')
+plt.savefig('e_coli_hist_k7.jpg')
