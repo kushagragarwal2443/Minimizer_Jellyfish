@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt 
 import numpy as np
 
-file_name = "mer_hist.histo"
+file_name = "mer_histo.histo"
 x_list = []
 y_list = []
 file1 = open(file_name) 
