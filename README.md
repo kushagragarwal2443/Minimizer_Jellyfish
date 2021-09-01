@@ -60,10 +60,11 @@ Incomplete push. The sanity checker was implemented, which runs properly for nea
 ---
 
 ### Initial results (k-mers vs Minimizers: k = w = 21) : September 1st
-All are the Illumina paired-end Human data in the cori cluster 
-| Data| K-mer |     |     | Minimizer |     |     |
-| --- | ---   | --- | --- | ---       | --- | --- |
-|     | G     | N   | C   | G         | N   | C   |
-| --- | ---   | --- | --- | ---       | --- | --- |
-| 30x | 3036 Mb | ? | 29.7| 279.29 Mb | ?   | 27.01|
+All are the Illumina paired-end Human data in the cori cluster. I have not performed any pre-processing mentioned in findGSE paper before running it through Jellyfish. Will do that next time. 
+| Data  | K-mer      |     |      | Minimizer  |     |      |
+| ---   | ---        | --- | ---  | ---        | --- | ---  |
+|       | G          | N   | C    | G          | N   | C    |
+| 30x   | 3036 Mb    | ?   | 29.7 | 279.29 Mb  | ?   | 27.01|
+| 50x_1 | 3097.73 Mb | ?   | 43.25| 284.037 Mb | ?   | 39.42|
+| 50x_2 | 3142.92 Mb | ?   | 42.31|            |     |      |
 ---
