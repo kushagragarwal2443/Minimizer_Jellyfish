@@ -58,3 +58,12 @@ Also added **distribution_plotter** to compare the plots for the kmer distributi
 Incomplete push. The sanity checker was implemented, which runs properly for nearly all cases. There is some minor difference though. Hoping to resolve it soon....
 
 ---
+
+### Initial results (k-mers vs Minimizers: k = w = 21) : September 1st
+All are the Illumina paired-end Human data in the cori cluster 
+| Data| K-mer |     |     | Minimizer |     |     |
+| --- | ---   | --- | --- | ---       | --- | --- |
+|     | G     | N   | C   | G         | N   | C   |
+| --- | ---   | --- | --- | ---       | --- | --- |
+| 30x | 3036 Mb | ? | 29.7| 279.29 Mb | ?   | 27.01|
+---
