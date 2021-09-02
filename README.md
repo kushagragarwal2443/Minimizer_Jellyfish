@@ -66,5 +66,14 @@ All are the Illumina paired-end Human data in the cori cluster. I have not perfo
 |       | G          | N   | C    | G          | N   | C    |
 | 30x   | 3036 Mb    | ?   | 29.7 | 279.29 Mb  | ?   | 27.01|
 | 50x_1 | 3097.73 Mb | ?   | 43.25| 284.037 Mb | ?   | 39.42|
-| 50x_2 | 3142.92 Mb | ?   | 42.31| 288.792 Mb |     | 28.47|
+| 50x_2 | 3142.92 Mb | ?   | 42.31| 288.792 Mb | ?   | 28.47|
+---
+### Yeast Reference Genome (size: 12.156 Mb)
+Illumina like reads are simulated using Mason and then I have performed both K-mer and Minimizer counting with k = w = 18 on the simulated reads.
+| Data  | K-mer      |     |      | Minimizer  |     |      |
+| ---   | ---        | --- | ---  | ---        | --- | ---  |
+|       | G          | N   | C    | G          | N   | C    |
+| 1_1.0M| 12.085 Mb  | ?   | 10.3 | 1.274 Mb   | ?   | 9.54 |
+| 2_5.0M| 12.103 Mb  | ?   | 51.37| 1.253 Mb   | ?   | 48.45|
+| 3_3.5M| 11.995 Mb  | ?   | 38.65| 1.262 Mb   | ?   | 35.51|
 ---
