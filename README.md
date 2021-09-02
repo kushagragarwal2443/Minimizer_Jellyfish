@@ -61,25 +61,25 @@ Incomplete push. The sanity checker was implemented, which runs properly for nea
 
 ### Initial results (k-mers vs Minimizers: k = w = 21) : September 1st
 All are the Illumina paired-end Human data in the cori cluster. I have not performed any pre-processing mentioned in findGSE paper before running it through Jellyfish. Will do that next time. 
-| Data  | K-mer      |     |      | Minimizer  |     |      |
-| ---   | ---        | --- | ---  | ---        | --- | ---  |
-|       | G          | N   | C    | G          | N   | C    |
-| 30x   | 3036 Mb    | ?   | 29.7 | 279.29 Mb  | ?   | 27.01|
-| 50x_1 | 3097.73 Mb | ?   | 43.25| 284.037 Mb | ?   | 39.42|
-| 50x_2 | 3142.92 Mb | ?   | 42.31| 288.792 Mb | ?   | 38.47|
+| Data  | K-mer      |              |      | Minimizer  |               |      |
+| ---   | ---        |     ---      | ---  | ---        |     ---       | ---  |
+|       | G          |      N       | C    |     G      |       N       | C    |
+| 30x   | 3036 Mb    | 90169.2    Mb| 29.7 | 279.29  Mb | 7543.623  Mb  | 27.01|
+| 50x_1 | 3097.73 Mb | 133976.822 Mb| 43.25| 284.037 Mb | 11196.738 Mb  | 39.42|
+| 50x_2 | 3142.92 Mb | 132976.945 Mb| 42.31| 288.792 Mb | 11109.828 Mb  | 38.47|
 ---
-### Yeast Reference Genome (size: 12.156 Mb)
+### Yeast Reference Genome (size: 12.156 Mb) : September 2nd
 Illumina like reads are simulated using Mason and then I have performed both K-mer and Minimizer counting with k = w = 18 on the simulated reads.
-| Data  | K-mer      |     |      | Minimizer  |     |      |
-| ---   | ---        | --- | ---  | ---        | --- | ---  |
-|       | G          | N   | C    | G          | N   | C    |
-| 1_1.0M| 12.085 Mb  | ?   | 10.3 | 1.274 Mb   | ?   | 9.54 |
-| 2_5.0M| 12.103 Mb  | ?   | 51.37| 1.253 Mb   | ?   | 48.45|
-| 3_3.5M| 11.995 Mb  | ?   | 38.65| 1.262 Mb   | ?   | 35.51|
-| 4_2.0M| 12.106 Mb  | ?   | 19.92| 1.268 Mb   | ?   | 18.35|
-| 5_3.0M| 12.001 Mb  | ?   | 31.08| 1.265 Mb   | ?   | 28.79|
-| 6_4.0M| 12.099 Mb  | ?   | 41.11| 1.259 Mb   | ?   | 38.56|
-| 7_6.0M| 12.081 Mb  | ?   | 61.76| 1.249 Mb   | ?   | 58.34|
+| Data  | K-mer      |           |      | Minimizer  |           |      |
+| ---   | ---        |    ---    | ---  | ---        | ---       | ---  |
+|       |     G      |     N     | C    |     G      | N         | C    |
+| 1_1.0M| 12.085 Mb  | 124.475 Mb| 10.3 | 1.274 Mb   | 12.153 Mb | 9.54 |
+| 2_5.0M| 12.103 Mb  | 621.731 Mb| 51.37| 1.253 Mb   | 60.708 Mb | 48.45|
+| 3_3.5M| 11.995 Mb  | 463.607 Mb| 38.65| 1.262 Mb   | 44.813 Mb | 35.51|
+| 4_2.0M| 12.106 Mb  | 241.151 Mb| 19.92| 1.268 Mb   | 23.267 Mb | 18.35|
+| 5_3.0M| 12.001 Mb  | 372.991 Mb| 31.08| 1.265 Mb   | 36.419 Mb | 28.79|
+| 6_4.0M| 12.099 Mb  | 497.390 Mb| 41.11| 1.259 Mb   | 48.547 Mb | 38.56|
+| 7_6.0M| 12.081 Mb  | 746.123 Mb| 61.76| 1.249 Mb   | 72.867 Mb | 58.34|
 
 One very crude relationship between C_M and C_K that I have found: C_K = A * C_K + B, where A = 1.05 \pm 0.009 & B = 0.62 \pm 0.64.
 ---
