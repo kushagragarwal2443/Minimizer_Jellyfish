@@ -66,5 +66,5 @@ All are the Illumina paired-end Human data in the cori cluster. I have not perfo
 |       | G          | N   | C    | G          | N   | C    |
 | 30x   | 3036 Mb    | ?   | 29.7 | 279.29 Mb  | ?   | 27.01|
 | 50x_1 | 3097.73 Mb | ?   | 43.25| 284.037 Mb | ?   | 39.42|
-| 50x_2 | 3142.92 Mb | ?   | 42.31|            |     |      |
+| 50x_2 | 3142.92 Mb | ?   | 42.31| 288.792 Mb |     | 28.47|
 ---
