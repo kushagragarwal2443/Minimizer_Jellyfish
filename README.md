@@ -81,5 +81,5 @@ Illumina like reads are simulated using Mason and then I have performed both K-m
 | 6_4.0M| 12.099 Mb  | 497.390 Mb| 41.11| 1.259 Mb   | 48.547 Mb | 38.56|
 | 7_6.0M| 12.081 Mb  | 746.123 Mb| 61.76| 1.249 Mb   | 72.867 Mb | 58.34|
 
-One very crude relationship between C_M and C_K that I have found: C_K = A * C_K + B, where A = 1.05 \pm 0.009 & B = 0.62 \pm 0.64.
+One very crude relationship between C_M and C_K that I have found: C_K = A * C_M + B, where A = 1.05 \pm 0.009 & B = 0.62 \pm 0.64.
 ---
