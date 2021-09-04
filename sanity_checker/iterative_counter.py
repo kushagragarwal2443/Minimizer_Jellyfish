@@ -34,9 +34,10 @@ def create_dict(fasta_sequences, k, w):
 
     dicti = dict()
 
+    print("\n\n\n")
+
     kmer_int = 0
     mask = 2**(2*k) - 1
-    # print("MASK:", mask)
     MAX_INT = 18446744073709551615
 
     for fasta in fasta_sequences:
@@ -48,6 +49,7 @@ def create_dict(fasta_sequences, k, w):
         hash_array = []
         infox_array = []
         valid_kmer_array = list(np.zeros(length-k+1, dtype=int))
+        pushed_kmer_array = list(np.zeros(length-k+1, dtype=int))
 
         for i in range(length):
             char_int = code_char(sequence[i])
@@ -66,18 +68,12 @@ def create_dict(fasta_sequences, k, w):
                     hash_array.append(hash)
                     infox_array.append(infox)
 
-        # print(kmer_int_array)
-        # print(hash_array)
-        # print(infox_array)
-        # print(valid_kmer_array)
-
-        # print()
-
         array_length = len(infox_array)
+
+        print(infox_array)
 
         min_infox = MAX_INT
         min_infox_pos = -1
-        min_string = ""
 
         for w_iterator in range(array_length-w+1):
 
@@ -89,33 +85,70 @@ def create_dict(fasta_sequences, k, w):
                 if(valid_kmer_array[kmer_iterator] == -1):
                     continue
 
-                if(infox_array[kmer_iterator]<= window_min_infox):
+                if(infox_array[kmer_iterator] <= window_min_infox): 
                     window_min_infox = infox_array[kmer_iterator]
                     window_min_infox_pos = kmer_iterator
 
             if(window_min_infox <= min_infox and window_min_infox_pos!=min_infox_pos and window_min_infox!=MAX_INT):
+
                 min_infox = window_min_infox
                 min_infox_pos = window_min_infox_pos
                 min_string = sequence[min_infox_pos:min_infox_pos+k]
 
-                if(min_string in dicti):
-                    dicti[min_string] +=1
-                else:
-                    dicti[min_string] = 1
-                # print("NEW MINIMIZER:", min_string, min_infox, min_infox_pos)
+                print("NEW MINIMIZER:", min_infox, min_infox_pos, min_string)
+
+                if(pushed_kmer_array[min_infox_pos]==0):
+                    print("PASSED THIS CHECK\n")
+                    if(min_string in dicti):
+                        dicti[min_string] +=1
+                    else:
+                        dicti[min_string] = 1
+                pushed_kmer_array[min_infox_pos] = 1
+
+                for kmer_iterator in range(w_iterator, w_iterator+w):
+                    if(valid_kmer_array[kmer_iterator] == -1):
+                        continue
+                    if(infox_array[kmer_iterator] == window_min_infox): 
+                        print("I AM IN THE LOOP WITHIN IF1", kmer_iterator, infox_array[kmer_iterator], window_min_infox, window_min_infox_pos)
+                        if(pushed_kmer_array[kmer_iterator]==0):
+                            print("PASSED THIS CHECK\n")
+                            pushed_kmer_array[kmer_iterator] = 1
+                            rand_string = sequence[kmer_iterator:kmer_iterator+k]
+                            if(rand_string in dicti):
+                                dicti[rand_string]+=1
+                            else:
+                                dicti[rand_string]=1
+
             
-            if(min_infox_pos < w_iterator and window_min_infox!=MAX_INT):
+            elif(min_infox_pos < w_iterator and window_min_infox!=MAX_INT):
+
                 min_infox = window_min_infox
                 min_infox_pos = window_min_infox_pos
                 min_string = sequence[min_infox_pos:min_infox_pos+k]
 
-                if(min_string in dicti):
-                    dicti[min_string] +=1
-                else:
-                    dicti[min_string] = 1
-                # print("OLD MINIMIZER OUT OF RANGE:", min_string, min_infox, min_infox_pos)
+                print("OUT OF WINDOW MINIMIZER:", min_infox, min_infox_pos, min_string)
 
-        # print("\n")
+                if(pushed_kmer_array[min_infox_pos]==0):
+                    print("PASSED THIS CHECK\n")
+                    if(min_string in dicti):
+                        dicti[min_string] +=1
+                    else:
+                        dicti[min_string] = 1
+                pushed_kmer_array[min_infox_pos] = 1
+
+                for kmer_iterator in range(w_iterator, w_iterator+w):
+                    if(valid_kmer_array[kmer_iterator] == -1):
+                        continue
+                    if(infox_array[kmer_iterator] == window_min_infox): 
+                        print("I AM IN THE LOOP WITHIN IF2", kmer_iterator, infox_array[kmer_iterator], window_min_infox, window_min_infox_pos)
+                        if(pushed_kmer_array[kmer_iterator]==0):
+                            print("PASSED THIS CHECK\n")
+                            pushed_kmer_array[kmer_iterator] = 1
+                            rand_string = sequence[kmer_iterator:kmer_iterator+k]
+                            if(rand_string in dicti):
+                                dicti[rand_string]+=1
+                            else:
+                                dicti[rand_string]=1
 
     return dicti
 

@@ -181,6 +181,7 @@ void mm_sketch(void *km, const char *str, int len, int w, int k, uint32_t rid, i
 		else if (buf_pos == min_pos) // old min has moved outside the window
 		{ 
 			if (l >= w + k - 1 && min.x != UINT64_MAX) kv_push(mm128_t, km, *p, min);
+			
 			for (j = buf_pos + 1, min.x = UINT64_MAX; j < w; ++j) // the two loops are necessary when there are identical k-mers
 				if (min.x >= buf[j].x) min = buf[j], min_pos = j; // >= is important s.t. min is always the closest k-mer
 			for (j = 0; j <= buf_pos; ++j)

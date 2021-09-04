@@ -2,7 +2,7 @@ from Bio import SeqIO
 
 fasta_sequences1 = SeqIO.parse(open("../sanity_checker/jelly.fa"),'fasta')
 fasta_sequences2 = SeqIO.parse(open("../sanity_checker/expected.fasta"),'fasta')
-write_file = open("../sanity_checker/comparison.txt","w+")
+write_file = open("../sanity_checker/comparison_robust.txt","w+")
 
 total1 = 0
 total2 = 0

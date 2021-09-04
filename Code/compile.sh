@@ -1,5 +1,5 @@
 #!/bin/bash
-cd Jellyfish_hacking_Aug20
+cd Jellyfish_hacking_Aug22
 autoreconf -i
 ./configure
 make -j 4
