@@ -34,7 +34,7 @@ def create_dict(fasta_sequences, k, w):
 
     dicti = dict()
 
-    print("\n\n\n")
+    # print("\n")
 
     kmer_int = 0
     mask = 2**(2*k) - 1
@@ -48,7 +48,7 @@ def create_dict(fasta_sequences, k, w):
         kmer_int_array = []
         hash_array = []
         infox_array = []
-        valid_kmer_array = list(np.zeros(length-k+1, dtype=int))
+        # valid_kmer_array = list(np.zeros(length-k+1, dtype=int))
         pushed_kmer_array = list(np.zeros(length-k+1, dtype=int))
 
         for i in range(length):
@@ -56,10 +56,10 @@ def create_dict(fasta_sequences, k, w):
 
             if(char_int >= 0):
                 kmer_int = (kmer_int << 2 | char_int) & mask
-            else:
-                for x in range(i-k+1, i+1):
-                    if(x>=0):
-                        valid_kmer_array[x] = -1
+            # else:
+            #     for x in range(i-k+1, i+1):
+            #         if(x>=0):
+            #             valid_kmer_array[x] = -1
 
             if(i >= (k-1)):
                     hash = hasher(kmer_int, mask)
@@ -70,7 +70,7 @@ def create_dict(fasta_sequences, k, w):
 
         array_length = len(infox_array)
 
-        print(infox_array)
+        # print(infox_array)
 
         min_infox = MAX_INT
         min_infox_pos = -1
@@ -82,8 +82,8 @@ def create_dict(fasta_sequences, k, w):
 
             for kmer_iterator in range(w_iterator, w_iterator+w):
 
-                if(valid_kmer_array[kmer_iterator] == -1):
-                    continue
+                # if(valid_kmer_array[kmer_iterator] == -1):
+                #     continue
 
                 if(infox_array[kmer_iterator] <= window_min_infox): 
                     window_min_infox = infox_array[kmer_iterator]
@@ -95,10 +95,10 @@ def create_dict(fasta_sequences, k, w):
                 min_infox_pos = window_min_infox_pos
                 min_string = sequence[min_infox_pos:min_infox_pos+k]
 
-                print("NEW MINIMIZER:", min_infox, min_infox_pos, min_string)
+                # print("NEW MINIMIZER:", min_infox, min_infox_pos, min_string)
 
                 if(pushed_kmer_array[min_infox_pos]==0):
-                    print("PASSED THIS CHECK\n")
+                    # print("PASSED THIS CHECK\n")
                     if(min_string in dicti):
                         dicti[min_string] +=1
                     else:
@@ -106,12 +106,12 @@ def create_dict(fasta_sequences, k, w):
                 pushed_kmer_array[min_infox_pos] = 1
 
                 for kmer_iterator in range(w_iterator, w_iterator+w):
-                    if(valid_kmer_array[kmer_iterator] == -1):
-                        continue
+                    # if(valid_kmer_array[kmer_iterator] == -1):
+                    #     continue
                     if(infox_array[kmer_iterator] == window_min_infox): 
-                        print("I AM IN THE LOOP WITHIN IF1", kmer_iterator, infox_array[kmer_iterator], window_min_infox, window_min_infox_pos)
+                        # print("I AM IN THE LOOP WITHIN IF1", kmer_iterator, infox_array[kmer_iterator], window_min_infox, window_min_infox_pos)
                         if(pushed_kmer_array[kmer_iterator]==0):
-                            print("PASSED THIS CHECK\n")
+                            # print("PASSED THIS CHECK\n")
                             pushed_kmer_array[kmer_iterator] = 1
                             rand_string = sequence[kmer_iterator:kmer_iterator+k]
                             if(rand_string in dicti):
@@ -126,10 +126,10 @@ def create_dict(fasta_sequences, k, w):
                 min_infox_pos = window_min_infox_pos
                 min_string = sequence[min_infox_pos:min_infox_pos+k]
 
-                print("OUT OF WINDOW MINIMIZER:", min_infox, min_infox_pos, min_string)
+                # print("OUT OF WINDOW MINIMIZER:", min_infox, min_infox_pos, min_string)
 
                 if(pushed_kmer_array[min_infox_pos]==0):
-                    print("PASSED THIS CHECK\n")
+                    # print("PASSED THIS CHECK\n")
                     if(min_string in dicti):
                         dicti[min_string] +=1
                     else:
@@ -137,12 +137,12 @@ def create_dict(fasta_sequences, k, w):
                 pushed_kmer_array[min_infox_pos] = 1
 
                 for kmer_iterator in range(w_iterator, w_iterator+w):
-                    if(valid_kmer_array[kmer_iterator] == -1):
-                        continue
+                    # if(valid_kmer_array[kmer_iterator] == -1):
+                    #     continue
                     if(infox_array[kmer_iterator] == window_min_infox): 
-                        print("I AM IN THE LOOP WITHIN IF2", kmer_iterator, infox_array[kmer_iterator], window_min_infox, window_min_infox_pos)
+                        # print("I AM IN THE LOOP WITHIN IF2", kmer_iterator, infox_array[kmer_iterator], window_min_infox, window_min_infox_pos)
                         if(pushed_kmer_array[kmer_iterator]==0):
-                            print("PASSED THIS CHECK\n")
+                            # print("PASSED THIS CHECK\n")
                             pushed_kmer_array[kmer_iterator] = 1
                             rand_string = sequence[kmer_iterator:kmer_iterator+k]
                             if(rand_string in dicti):
@@ -160,8 +160,8 @@ def write_dicti(dicti, write_file):
 
 def main():
 
-    k = 4
-    w = 4
+    k = 21
+    w = 21
     fasta_sequences = SeqIO.parse(open("../fasta_simulator/simulated_fasta.fasta"),'fasta')
     write_file = open("expected.fasta", "w+")
     dicti = create_dict(fasta_sequences, k, w)

@@ -59,16 +59,23 @@ Incomplete push. The sanity checker was implemented, which runs properly for nea
 
 ---
 
-### Initial results (k-mers vs Minimizers: k = w = 21) : September 1st
+### Update 4: September 1st
+
+**Initial results (k-mers vs Minimizers: k = w = 21)**
+
 All are the Illumina paired-end Human data in the cori cluster. I have not performed any pre-processing mentioned in findGSE paper before running it through Jellyfish. Will do that next time. 
+
 | Data  | K-mer      |              |      | Minimizer  |               |      |
 | ---   | ---        |     ---      | ---  | ---        |     ---       | ---  |
 |       | G          |      N       | C    |     G      |       N       | C    |
 | 30x   | 3036 Mb    | 90169.2    Mb| 29.7 | 279.29  Mb | 7543.623  Mb  | 27.01|
 | 50x_1 | 3097.73 Mb | 133976.822 Mb| 43.25| 284.037 Mb | 11196.738 Mb  | 39.42|
 | 50x_2 | 3142.92 Mb | 132976.945 Mb| 42.31| 288.792 Mb | 11109.828 Mb  | 38.47|
+
 ---
-### Yeast Reference Genome (size: 12.156 Mb) : September 2nd
+
+**Yeast Reference Genome (size: 12.156 Mb)**
+
 Illumina like reads are simulated using Mason and then I have performed both K-mer and Minimizer counting with k = w = 18 on the simulated reads.
 | Data  | K-mer      |           |      | Minimizer  |           |      |
 | ---   | ---        |    ---    | ---  | ---        | ---       | ---  |
@@ -82,4 +89,17 @@ Illumina like reads are simulated using Mason and then I have performed both K-m
 | 7_6.0M| 12.081 Mb  | 746.123 Mb| 61.76| 1.249 Mb   | 72.867 Mb | 58.34|
 
 One very crude relationship between C_M and C_K that I have found: C_K = A * C_M + B, where A = 1.05 \pm 0.009 & B = 0.62 \pm 0.64.
+
+---
+
+### Update 5: September 9th
+
+The current count_main.cc code successfully implements both robust winnowing (currently marked with #if 0) and all minimizers (currently marked with #if 1). All changes have been made.
+
+The sanity_checker folder contains the files iterative_counter (for all minimizers), iterative_counter_withC (for all minimizers with -C flag), iterative_counter_robust (for robust winnowing) and iterative_counter_robust_withC (for robust winnowing with -C flag). All the codes work correctly and have been crosschecked by multiple simulations.
+
+Things remaining on the code front:
+1) Implement logic for ambiguous bases
+2) Clean the code and make it presentable
+
 ---
