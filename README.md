@@ -103,3 +103,18 @@ Things remaining on the code front:
 2) Clean the code and make it presentable
 
 ---
+### Septermer 9th (Souvadra)
+Single threaded run, all minimizers, new and checked version of the Code is used.
+
+the Minimizer codes has been run on k=w=18 in the first round, then k=w=21
+
+| Data  | K-mer      |k=18       |      | Minimizer  | k=w=18    |      | Minimizer  | k=w=21    |      |
+| ---   | ---        |    ---    | ---  | ---        | ---       | ---  | ---        | ---       | ---  |
+|       |     G      |     N     | C    |     G      | N         | C    |    G      | N         | C    |
+| 1_1.0M| 12.085 Mb  | 124.475 Mb| 10.3 | 1.275 Mb   | 12.163 Mb | 9.54 | ? Mb   | ? Mb | ? |
+| 2_5.0M| 12.103 Mb  | 621.731 Mb| 51.37| 1.251 Mb   | 60.763 Mb | 48.55|
+| 3_3.5M| 11.995 Mb  | 463.607 Mb| 38.65| 1.263 Mb   | 44.925 Mb | 35.57|
+| 4_2.0M| 12.106 Mb  | 241.151 Mb| 19.92| 1.268 Mb   | 23.267 Mb | 18.35|
+| 5_3.0M| 12.001 Mb  | 372.991 Mb| 31.08| 1.265 Mb   | 36.419 Mb | 28.79|
+| 6_4.0M| 12.099 Mb  | 497.390 Mb| 41.11| 1.26  Mb   | 48.586 Mb | 38.56|
+| 7_6.0M| 12.081 Mb  | 746.123 Mb| 61.76| 1.249 Mb   | 72.867 Mb | 58.34|
