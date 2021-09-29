@@ -84,10 +84,11 @@ public:
           // std::cout << kmer_int[0] << " " << kmer_int[1] << std::endl;
           //std::cout << filled_ << std::endl; 
           //if (filled_ == 1) std::cout << "filled is 1" << std::endl; // Souvadra's addition
-          //if (filled_ == 1) read_number += 1; // need to send this signal to count_main.cc somehow to update "rid" variable
-        } else {
+          if (filled_ == 1) read_number += 1; // need to send this signal to count_main.cc somehow to update "rid" variable
+        } 
+        else {
             // std::cout << "line 85 @mer_iterator.hpp" << std::endl;
-            read_number += 1; // Souvadra's addition
+            // read_number += 1; // Souvadra's addition
             filled_ = 0;
         }
       } while(filled_ < m_.k() && cseq_ < (*job_)->end);

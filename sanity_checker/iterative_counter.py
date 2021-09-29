@@ -34,14 +34,14 @@ def create_dict(fasta_sequences, k, w):
 
     dicti = dict()
 
-    # print("\n")
+    print("\nSTARTING PYTHON")
 
     kmer_int = 0
     mask = 2**(2*k) - 1
     MAX_INT = 18446744073709551615
 
     for fasta in fasta_sequences:
-
+        
         sequence = str(fasta.seq)
         length = len(sequence)
 
@@ -160,9 +160,10 @@ def write_dicti(dicti, write_file):
 
 def main():
 
-    k = 21
-    w = 21
+    k = 4
+    w = 4
     fasta_sequences = SeqIO.parse(open("../fasta_simulator/simulated_fasta.fasta"),'fasta')
+    # fasta_sequences = SeqIO.parse(open("../reads_small.fastq"),'fastq')
     write_file = open("expected.fasta", "w+")
     dicti = create_dict(fasta_sequences, k, w)
     write_dicti(dicti, write_file)

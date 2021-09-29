@@ -58,6 +58,8 @@ public:
   /// buffer. A StreamIterator is expected to have a next() method,
   /// which is thread safe, and which returns (move) a
   /// std::unique<std::istream> object.
+
+  // This line is called in count_main.cc using parser_(mer_dna::k(), streams.nb_streams(), 3 * nb_threads, 8, streams)
   mer_overlap_sequence_parser(uint16_t mer_len, uint32_t max_producers, uint32_t size, size_t buf_size,
                               StreamIterator& streams) :
     super(max_producers, size),
@@ -159,6 +161,9 @@ protected:
   }
 
   void read_fasta(stream_status& st, sequence_ptr& buff) {
+
+    // std::cout << "HELLO KUSH I AM IN READ_FASTA......" << std::endl;
+
     auto& stream = *st.stream.standard;
     size_t read = 0;
     if(st.have_seam) {
@@ -166,10 +171,16 @@ protected:
       read = mer_len_ - 1;
     }
 
+    // std::cout << "READ VALUE AT START WAS: " << read << std::endl;
+
     // Here, the current stream is assumed to always point to some
     // sequence (or EOF). Never at header.
     while(stream.good() && read < buf_size_ - mer_len_ - 1) {
+
+      // std::cout << read_sequence(stream, read, buff.start, '>') << std::endl;
       read += read_sequence(stream, read, buff.start, '>');
+      // std::cout << "READ VALUE UPDATED: " << read << std::endl;
+
       if(stream.peek() == '>') {
         if(read > 0)
           *(buff.start + read++) = 'N'; // Add N between reads

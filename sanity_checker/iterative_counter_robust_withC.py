@@ -108,8 +108,8 @@ def create_dict(fasta_sequences, k, w):
         # print(hash_array)
         # print(hash_rev_array)
         # print("INFOX")
-        print(infox_array)
-        print(is_reverse_array)
+        # print(infox_array)
+        # print(is_reverse_array)
 
         min_infox = MAX_INT
         min_infox_pos = -1
@@ -165,8 +165,8 @@ def write_dicti(dicti, write_file):
 
 def main():
 
-    k = 4
-    w = 4
+    k = 16
+    w = 12
     fasta_sequences = SeqIO.parse(open("../fasta_simulator/simulated_fasta.fasta"),'fasta')
     write_file = open("expected.fasta", "w+")
     dicti = create_dict(fasta_sequences, k, w)

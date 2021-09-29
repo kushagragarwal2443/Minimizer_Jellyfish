@@ -1,0 +1,8 @@
+
+DONE
+
+Total sequences: 862 862
+Correct for both: 862
+Mismatch in count: 0
+Not present in File 1: 0
+Not present in File 2: 0

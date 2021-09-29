@@ -103,3 +103,9 @@ Things remaining on the code front:
 2) Clean the code and make it presentable
 
 ---
+
+### Update 6: September 30th
+
+The code in Jellyfish_Hacking_Illumina_Sep29 is working perfectly if provided with correct read lengths !!!!!!!!!!!!!!!!
+
+---

@@ -71,6 +71,8 @@ public:
         filled_ = 0;
         }
 
+      std::cout << "I AM IN MER_QUAL_ITERATOR" << std::endl;
+
       do {
         const int  code = m_.code(*cseq_++);
          const char qual = cqual_ < equal_ ? *cqual_++ : std::numeric_limits<char>::max();
@@ -79,7 +81,12 @@ public:
           if(canonical_)
             rcm_.shift_right(rcm_.complement(code));
           filled_ = std::min(filled_ + 1, mer_dna::k());
-        } else
+        } 
+        else if (code >=0 && qual < min_qual_)
+        {
+          std::cout << "HELLO HOW DID THIS HAPPEN >>>>>> SAD " << qual << " " << min_qual_ << std::endl;
+        }
+        else
           filled_ = 0;
       } while(filled_ < m_.k() && cseq_ < eseq_);
       if(filled_ >= m_.k())

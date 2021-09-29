@@ -48,17 +48,17 @@ def create_dict(fasta_sequences, k, w):
         kmer_int_array = []
         hash_array = []
         infox_array = []
-        valid_kmer_array = list(np.zeros(length-k+1, dtype=int))
+        # valid_kmer_array = list(np.zeros(length-k+1, dtype=int))
 
         for i in range(length):
             char_int = code_char(sequence[i])
 
             if(char_int >= 0):
                 kmer_int = (kmer_int << 2 | char_int) & mask
-            else:
-                for x in range(i-k+1, i+1):
-                    if(x>=0):
-                        valid_kmer_array[x] = -1
+            # else:
+            #     for x in range(i-k+1, i+1):
+            #         if(x>=0):
+            #             valid_kmer_array[x] = -1
 
             if(i >= (k-1)):
                     hash = hasher(kmer_int, mask)
@@ -123,8 +123,8 @@ def write_dicti(dicti, write_file):
 
 def main():
 
-    k = 4
-    w = 4
+    k = 21
+    w = 21
     fasta_sequences = SeqIO.parse(open("../fasta_simulator/simulated_fasta.fasta"),'fasta')
     write_file = open("expected.fasta", "w+")
     dicti = create_dict(fasta_sequences, k, w)
