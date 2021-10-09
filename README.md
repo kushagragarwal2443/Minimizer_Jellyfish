@@ -109,3 +109,9 @@ Things remaining on the code front:
 The code in Jellyfish_Hacking_Illumina_Sep29 is working perfectly if provided with correct read lengths !!!!!!!!!!!!!!!!
 
 ---
+
+### Update 7: October 10th
+
+The code for Bc_distance computations and the scripts used in Cori are present in the BC_Dist folder. Current state of the code: Jellyfish_hacking_Single works perfectly on single threads. Whereas, Jellyfish_hacking_Illumina_Sep29 works perfectly if provided with the correct read length.
+
+---

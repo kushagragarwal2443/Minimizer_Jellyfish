@@ -27,6 +27,7 @@ uname -v = #29~20.04.1-Ubuntu SMP Wed Aug 11 15:58:17 UTC 2021
 /usr/bin/oslevel       = unknown
 /bin/universe          = unknown
 
+PATH: /home/kushagra/.nvm/versions/node/v16.9.1/bin
 PATH: /home/kushagra/anaconda3/condabin
 PATH: /home/kushagra/.local/bin
 PATH: /usr/local/sbin
@@ -647,7 +648,7 @@ configure:12860: gcc -o conftest -g -O2   conftest.c  >&5
 configure:12860: $? = 0
 configure:12860: ./conftest
 configure:12860: $? = 0
-configure:12870: result: 906ea:1100800:7ffafbbf:bfebfbff
+configure:12870: result: 906ea:a100800:7ffafbbf:bfebfbff
 configure:12897: checking for x86 cpuid 0x00000007 output
 configure:12929: gcc -o conftest -g -O2   conftest.c  >&5
 configure:12929: $? = 0
@@ -1263,7 +1264,7 @@ ax_cv_check_cxxflags___mssse3=yes
 ax_cv_gcc_x86_avx_xgetbv_0x00000000=1f:0
 ax_cv_gcc_x86_avx_xgetbv_=unknown
 ax_cv_gcc_x86_cpuid_0x00000000=16:756e6547:6c65746e:49656e69
-ax_cv_gcc_x86_cpuid_0x00000001=906ea:1100800:7ffafbbf:bfebfbff
+ax_cv_gcc_x86_cpuid_0x00000001=906ea:a100800:7ffafbbf:bfebfbff
 ax_cv_gcc_x86_cpuid_0x00000007=0:29c67af:40000000:9c002e00
 ax_cv_gcc_x86_cpuid_0x80000000=80000008:0:0:0
 ax_cv_gcc_x86_cpuid_0x80000001=0:0:121:2c100800

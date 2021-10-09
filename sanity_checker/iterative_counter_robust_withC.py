@@ -165,8 +165,8 @@ def write_dicti(dicti, write_file):
 
 def main():
 
-    k = 16
-    w = 12
+    k = 27
+    w = 27
     fasta_sequences = SeqIO.parse(open("../fasta_simulator/simulated_fasta.fasta"),'fasta')
     write_file = open("expected.fasta", "w+")
     dicti = create_dict(fasta_sequences, k, w)

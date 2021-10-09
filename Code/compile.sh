@@ -1,5 +1,5 @@
 #!/bin/bash
-cd Jellyfish_hacking_Illumina_Sep29
+cd Jellyfish_hacking_Single
 autoreconf -i
 ./configure
 make -j 4

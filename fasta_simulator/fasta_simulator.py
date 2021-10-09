@@ -2,8 +2,8 @@ import random
 
 write_file = open("simulated_fasta.fasta", "w+")
 
-num_sequences = 10000
-length_sequence = 150
+num_sequences = 100000
+length_sequence = 1000
 
 for i in range(num_sequences):
     sequence = ""
@@ -176,3 +176,4 @@ write_file.close()
 # both rid and job id changed 
 # TGCTA -- 0 -- 0 <-- line 370
 # GCTAG -- 0 -- 0 <-- line 370
+
